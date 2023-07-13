@@ -323,10 +323,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //Slider
 
+let slideIndex = 1;
+
 const slides = document.querySelectorAll('.offer__slide'),
         prev = document.querySelector('.offer__slider-prev'),
         next = document.querySelector('.offer__slider-next');
-let slideIndex = 1;
+
+showSlides(slideIndex);
 
 function showSlides(n) {
   if (n > slides.length) {
@@ -337,20 +340,20 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
 
-  slides.forEach(item => item.style.display = 'none');
+  slides.forEach((item) => item.style.display = 'none');
 
   slides[slideIndex - 1].style.display = 'block';
 }
 
-    function plusSlides(n) {
+function plusSlides(n) {
         showSlides(slideIndex += n);
     }
 
-    prev.addEventListener('click', () => {
+    prev.addEventListener(`click`, () => {
         plusSlides(-1);
     });
 
-    prev.addEventListener('click', () => {
+    next.addEventListener(`click`, () => {
       plusSlides(1);
   });
 });
