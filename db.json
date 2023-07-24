@@ -29,9 +29,20 @@
       "id": 1
     },
     {
+<<<<<<< HEAD
       "name": "yfytyvu",
       "phone": "+7(981)789-1539",
       "id": 2
+=======
+      "name": "hyjtyjty",
+      "phone": "uyumyumy",
+      "id": 2
+    },
+    {
+      "name": "jyukyuky",
+      "phone": "tyjhrtj",
+      "id": 3
+>>>>>>> d960c6d9b9abf962c00106822bb46a7818c7bda8
     }
   ]
 }
