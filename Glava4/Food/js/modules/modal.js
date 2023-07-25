@@ -49,3 +49,4 @@ window.removeEventListener('scroll', showModalByScroll); //Удаляет обр
 }
 
 window.addEventListener('scroll', showModalByScroll); 
+

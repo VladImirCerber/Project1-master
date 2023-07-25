@@ -1,4 +1,5 @@
    function cards() {
+    
          //Использовать классы для карточек
     
         class MenuCard {
