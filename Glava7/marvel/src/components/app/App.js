@@ -17,28 +17,30 @@ class App extends Component{
             selectedChar: id
         })
     }
-    state = {
-        showRandomChar: true
-    }
+    // state = {
+    //     showRandomChar: true
+    // }
 
-    toggleRandomChar = () => {
-        this.setState((state) => {
-            return {
-                showRandomChar: !state.showRandomChar
-            }
-        })
-    }
+    // toggleRandomChar = () => {
+    //     this.setState((state) => {
+    //         return {
+    //             showRandomChar: !state.showRandomChar
+    //         }
+    //     })
+    // }
 
     render () {
         return (
         <div className="app">
             <AppHeader/>
             <main>
-                {this.state.showRandomChar ? <RandomChar/> : null}
-                <button onClick={this.toggleRandomChar}>Click me</button>
+                {/* {this.state.showRandomChar ? */}
+                 <RandomChar/> 
+                {/* //  : null} */}
+                {/* <button onClick={this.toggleRandomChar}>Click me</button> */}
                 <div className="char__content">
-                    <CharList/>
-                    <CharInfo/>
+                    <CharList onCharSelected={this.onCharSelected}/>
+                    <CharInfo charId={this.state.selectedChar}/>
                 </div>
                 <img className="bg-decoration" src={decoration} alt="vision"/>
             </main>
