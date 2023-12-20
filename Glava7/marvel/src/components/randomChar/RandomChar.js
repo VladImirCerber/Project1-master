@@ -4,7 +4,7 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 import MarvelService from '../../services/MarvelService';
 
 import './randomChar.scss';
-import molshit from '../../recources/img/molshit.png'
+import molshit from '../../recources/img/molshit.png';
 
 class RandomChar extends Component {
     state = {
@@ -17,7 +17,7 @@ class RandomChar extends Component {
 
     componentDidMount() {
         this.updateChar();
-        // this.timerId = setInterval(this.updateChar, 3000);
+        // this.timerId = setInterval(this.updateChar, 15000);
     }
 
     componentWillUnmount() {
@@ -25,7 +25,10 @@ class RandomChar extends Component {
     }
 
     onCharLoaded = (char) => {
-        this.setState({char, loading: false})
+        this.setState({
+            char, 
+            loading: false
+        })
     }
 
     onCharLoading = () => {
@@ -47,14 +50,15 @@ class RandomChar extends Component {
         this.marvelService
             .getCharacter(id)
             .then(this.onCharLoaded)
-            .catch(this.onError)
+            .catch(this.onError);
     }
 
-    render () {
+    render() {
+
         const {char, loading, error} = this.state;
         const errorMessage = error ? <ErrorMessage/> : null;
         const spinner = loading ? <Spinner/> : null;
-        const content =!(loading || error) ? <View char={char}/> : null;
+        const content = !(loading || error) ? <View char={char}/> : null;
 
         return (
             <div className="randomchar">
