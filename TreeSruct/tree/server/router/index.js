@@ -1,17 +1,28 @@
-const express = require('express')
-const mongoose = require('mongoose')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+const expressFormData = require('express-form-data')
+const os = require('os')
 
-const { MONGO_URL, MONGO_OPTIONS, SERVER_PORT } = require('./consts')
-const { getRouter, getMiddlewares } = require('./router')
+const apiTreeRouter = require('./tree')
+const staticRouter = require('./static')
 
 
-// Init
-const server = express()
-mongoose.connect(MONGO_URL, MONGO_OPTIONS)
+const getRouter = (server) => {
+  server.use('/api/tree', apiTreeRouter)
+  server.use('/static', staticRouter)
+}
 
-// Get full router and middlewares
-getMiddlewares(server)
-getRouter(server)
+const getMiddlewares = (server) => {
+  server.use(expressFormData.parse({
+    uploadDir: os.tmpdir(),
+    autoClean: true
+  }))
+  server.use(bodyParser.json())
+  server.use(bodyParser.urlencoded({ extended: true }))
+  server.use(cors({ origin: '*' }))
+}
 
-// Start server
-server.listen(SERVER_PORT, () => console.log(`SERVER@${SERVER_PORT}`))
+module.exports = {
+  getRouter,
+  getMiddlewares,
+}

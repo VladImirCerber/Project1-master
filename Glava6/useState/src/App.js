@@ -1,6 +1,7 @@
-import {Component, useState} from 'react';
+import {Component, useState, useEffect} from 'react';
 import {Container} from 'react-bootstrap';
 import './App.css';
+
 // class Slider extends Component {
 
 //     constructor(props) {
@@ -9,6 +10,14 @@ import './App.css';
 //             autoplay: false,
 //             slide: 0
 //         }
+//     }
+
+//     componentDidMount() {
+//         document.title = `Slide: ${this.state.slide}`;
+//     }
+
+//     componentDidUpdate() {
+//         document.title = `Slide: ${this.state.slide}`;
 //     }
 
 //     changeSlide = (i) => {
@@ -46,27 +55,25 @@ import './App.css';
 //     }
 // }
 
-const calcValue = () => {
-    console.log('random');
-
-    return Math.random() * (50 - 1) + 1;
-}
 
 const Slider = (props) => { 
 
-    const [slide, setSlide] = useState(() => calcValue());
+    const [slide, setSlide] = useState(0);
     const [autoplay, setAutoPlay] = useState(false);
-    // const [state, setState] = useState({slide:0, autoplay: false});
 
-    // function changeSlide(i) {
-    //     setState(state => ({...state, slide: state.slide + i}));
-      
-    // }
+    function logging() {
+        console.log('log!');
+    }
     
-    // function toggleAutoplay() {
-    //     setState(state => ({...state, autoplay: !state.autoplay}));
-    // }
+    useEffect(() => {
+        console.log('effect');
+        document.title = `Slide: ${slide}`;
 
+    }, [slide]);
+
+    useEffect(() => {
+        console.log('autoplay');
+    }, [autoplay])
 
     function changeSlide(i) {
         setSlide(slide => slide + i);
@@ -100,8 +107,16 @@ const Slider = (props) => {
 
 
 function App() {
+    const [slider, setSlider] = useState(true);
+
+
   return (
-        <Slider/>
+    <>
+    <button onClick={() => setSlider(false)}>Click</button>
+    {slider ? <Slider/> : null}
+    </>
+
+        
   );
 }
 
