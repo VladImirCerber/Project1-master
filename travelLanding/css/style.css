@@ -737,14 +737,91 @@ textarea {
   }
   /*Places styles end */
 
-  /*Prefecture styles start */
+  /*Tours styles start */
 
-  .prefecture{
+  .tours{
+    margin-bottom: 139px;
+  }
+
+  .tours__tour{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 108px;
+    align-items: center;
+    margin-bottom: 77px;
+  }
+
+  .tour__info{
+    padding-left: 47px;
+  }
+
+  .tour__title{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 85px;
+  }
+
+  .tour__desc{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 85px;
+  }
+
+  .tour__more{
+    padding-right: 59px;
+    font-size: 16px;              /*Размер шрифта обьекта*/
+    line-height: 24px;              /*высота обьекта, в пикселях*/
+    color: #006dfe;
+    text-decoration: none; 
+    background: url(../img/svg/lineleft.svg) no-repeat right center;
+  }
+
+  .tour__more:hover, .tour__more:focus{
+    opacity: 0.65;
+  }
+
+  /*Tours styles start */
+  /*Top styles start */
+
+  .top{
+    margin-bottom: 86px;
+  }
+
+  .top__title{
+    margin-bottom: 54px;
+  }
+
+  .top__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 57px;
+    
     
   }
 
-  .prefect__title{
-    
+  .top__card-pic{
+    position: absolute;
   }
 
-  /*Prefecture styles start */
+  .top__card-stats{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(21, 24, 36, 0.6);
+  }
+
+  .top__card-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+  }
+
+  
+
+  /*Top styles start */
