@@ -453,6 +453,13 @@ textarea {
     top: 0;
     left: 0;
     width: 100%;
+    transition: 0.2s linear;
+    padding-bottom: 20px;
+    z-index: 999;
+  }
+
+  .header_active{
+    background: #0e1d28;
   }
 
   .header__wrapper{
@@ -788,6 +795,11 @@ textarea {
     margin-bottom: 86px;
   }
 
+  .top__card{
+    display: flex;
+    flex-direction: column;
+  }
+
   .top__title{
     margin-bottom: 54px;
   }
@@ -796,12 +808,11 @@ textarea {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 57px;
-    
-    
   }
 
   .top__card-pic{
-    position: absolute;
+    position: relative;
+    margin-bottom: 45px;
   }
 
   .top__card-stats{
@@ -809,19 +820,57 @@ textarea {
     flex-wrap: wrap;
     align-items: center;
     position: absolute;
+    justify-content: flex-end;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px
   }
 
   .top__card-title{
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     color: white;
+    margin: 0 auto 0 0;
   }
 
+  .top__card-likes{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    padding-right: 20px;
+    background: url(../img/svg/likes.svg) no-repeat right;
+    margin-right: 14px;
+  }
   
+  .top__card-comments{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    padding-right: 23px;
+    background: url(../img/svg/comment.svg) no-repeat right;
+  }
 
-  /*Top styles start */
+  .top__card-desc{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+
+  .top__card-more{
+    width: 118px;
+    padding: 12px 19px;
+    background: #006dfe;
+    color: white;
+    font-size: 16px;
+    margin: auto 0 0 0;
+  }
+
+  .top__card-more:hover, top__card-more:focus, top__card-more:active{
+    background: #1b7dff;
+  }
+  /*Top styles end */
