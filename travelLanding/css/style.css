@@ -677,7 +677,7 @@ textarea {
     display: grid;
     -ms-grid-columns: 1fr 55px 1fr 55px 1fr;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 55px;
+    column-gap: 55px;
     padding: 0 100px;
   }
 
@@ -860,7 +860,7 @@ textarea {
     display: grid;
     -ms-grid-columns: 1fr 108px 1fr;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 108px;
+    column-gap: 108px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -927,8 +927,8 @@ textarea {
     display: grid;
     -ms-grid-columns: 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr;
     grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 57px;
-    grid-row-gap: 57px; 
+    column-gap: 57px;
+    row-gap: 57px; 
   }
 
   .top__card-pic{
@@ -1095,7 +1095,7 @@ textarea {
     }
     .benefits__cards {
       padding: 0 15px 0 15px;
-      grid-column-gap: 35px;
+      column-gap: 35px;
     }
     .benefits__title {
       padding: 55px 15px;
@@ -1113,7 +1113,7 @@ textarea {
       grid-column: span 6;
     }
     .tours__tour {
-      grid-column-gap: 35px;
+      column-gap: 35px;
     }
     .tour__info {
       padding-left: 0;
@@ -1125,8 +1125,8 @@ textarea {
       margin-bottom: 15px;
     }
     .top__cards {
-      grid-column-gap: 25px;
-      grid-row-gap: 55px;
+      column-gap: 25px;
+      row-gap: 55px;
     }
     .top__card {
       -ms-grid-column-span: 3;
