@@ -197,6 +197,7 @@ body {
 
 .history {
     margin-top: 166px;
+    padding-bottom: 200px;
 }
 
 .history-title {
@@ -266,4 +267,56 @@ body {
     z-index: 999;
     top: 241px;
     left: 486px;
+}
+
+.black-block {
+    background-image: url(../img/blackbg.jpg);
+    padding: 80px 0;
+}
+
+.left-title {
+    font-family: "Tinos", serif;
+    font-size: 52px;
+    font-weight: 400;
+    color: #D67E34;
+
+    margin-bottom: 20px;
+}
+
+.left-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+}
+
+.right-btn {
+    background-color: #FF7400;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 14px 19px;
+    font-weight: 700;
+
+    transition: background-color 0.2s linear;
+}
+
+.block-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.dishes-title {
+    font-family: "Tinos", serif;
+    font-size: 52px;
+    font-weight: 400;
+    text-align: center;
+
+    padding-top: 132px;
+}
+
+.dishes-title span {
+    color: #D67E34;
 }
