@@ -148,4 +148,47 @@ let result = [];
 
 console.log(getSums([1, 2, 3, 4, 5]));
 
+/////////////////
 
+let n = 100;
+
+nextPrime:
+for (let i = 2; i <= n; i++) {
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) continue nextPrime; 
+    }
+    console.log(i);
+}
+
+//////////////////
+
+let browser = 'Edge';
+
+if (browser == 'Edge') {
+    console.log("You've got the Edge!");
+} else if (browser == 'Chrome'
+|| browser == 'Firefox'
+|| browser == 'Safari'
+|| browser == 'Opera') {
+    console.log( 'Okay we support these browsers too' );
+} else {
+    console.log( 'We hope that this page looks ok!' );
+}
+
+/////////////////////
+
+const number = 0;
+
+switch(number) {
+    case 0:
+        console.log('Вы ввели число 0');
+        break;
+
+    case 1:
+        console.log('Вы ввели число 1');
+        break;
+    case 2:
+    case 3:
+        console.log('Вы ввели число 2 или 3');
+        break;
+} 
