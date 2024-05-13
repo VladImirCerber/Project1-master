@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+<<<<<<< HEAD
         // let answer;
 
         // do {
@@ -17,6 +18,46 @@
 
         
         
+=======
+    //     let vopros = prompt('Кто там?', '');
+    //     if (vopros == 'admin') {
+    //         let pass = prompt('Введите пароль?', '');
+    //         if (pass === 'I am boss') {
+    //             alert('Здравствуйте хозяин!');
+    //         } else if (pass === '' || pass === null) {
+    //             alert('Отменено!');
+    //         } else {
+    //         alert('Отменено');
+    //         } 
+    // } else if (vopros === '' || vopros === null) {
+    //     alert('Отменено');
+    // } else {
+    //     alert('Я вас не знаю!');
+    // }
+
+    // let num;
+    // do {
+    //     num = prompt('Введите число больше 100?', 0);
+    // }   while (num <= 100 && num);
+
+    function pow(x, n) {
+        let result = x;
+
+        for (let i = 1; i < n; i++) {
+            result *= x;
+        }
+        return result;
+    }
+
+    let x = prompt('x?', "");
+    let n = prompt('n?', "");
+
+    if (n >= 1 && n % 1 == 0) {
+        alert(pow(x, n));
+    } else {
+        alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+    }
+>>>>>>> b02e33939daf2852088d5b2b2c3020899135325b
     </script>
 </body>
 </html>

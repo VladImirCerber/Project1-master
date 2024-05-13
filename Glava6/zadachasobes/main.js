@@ -148,6 +148,7 @@ let result = [];
 
 console.log(getSums([1, 2, 3, 4, 5]));
 
+<<<<<<< HEAD
 /////////////////
 
 let n = 100;
@@ -192,3 +193,93 @@ switch(number) {
         console.log('Вы ввели число 2 или 3');
         break;
 } 
+=======
+//Условия и Логические операторы
+
+let age = 90, first = 14, two = 90;
+
+if (!(age >= first && age <= two)) {
+    console.log('Вы вне диапозона');
+} else {
+    console.log('вы в диапозоне');
+    // console.log(`Вы должны находиться от ${first} до ${two}`);
+}
+
+//Напишите код, который будет спрашивать логин с помощью prompt.
+// Если посетитель вводит «Админ», то prompt запрашивает пароль, если ничего не введено или нажата клавиша Esc – показать «Отменено», в противном случае отобразить «Я вас не знаю».
+// Пароль проверять так:
+// Если введён пароль «Я главный», то выводить «Здравствуйте!»,
+// Иначе – «Неверный пароль»,
+// При отмене или в случае если ничего не введено – «Отменено».
+
+////////////////////////////
+
+
+
+for (let i = 2; i <= 10; i++) {
+    if (i % 2 == 0) {
+        console.log(i);
+    }
+}
+
+let i = 0;
+while (i < 3) {
+    console.log(`number ${i}!`);
+    i++;
+}
+
+let n = 10;
+
+    nextPrime:
+    for (let i = 2; i <= n; i++) {
+        for (let j = 2; j < i; j++) {
+            if (i % j == 0) continue nextPrime;
+        }
+        console.log(`Простое число: ${i}`);
+    }
+
+
+    ////////////if...else vmesto switch!!!
+
+    let = browser;
+        if (browser == 'Edge') {
+            alert( "You've got the Edge!" );
+        } else if (browser == 'Chrome' || 'Firefox' || 'Safari' || 'Opera') {
+            alert( 'Okay we support these browsers too' );
+        } else {
+            alert( 'We hope that this page looks ok!' );
+        }
+
+    ////////////////////
+   
+    function checkAge(age) {
+        return (age >= 18) || console.log('roditeli razreshili?');
+    }
+          
+    checkAge(17);
+
+    ///////////////////////
+    function minZnach(a, b) {
+        return (a < b) ? console.log(a) : console.log(b);
+    }
+
+    minZnach(2, 5);
+    minZnach(3, -1);
+    minZnach(1, 1);
+
+    ///////////////////
+
+    function pow(x, n) {
+        let result = x;
+
+        for (let i = 1; i < n; i++) {
+            result *= x;
+        }
+        return result;
+    }
+
+    let x = 
+
+    
+        
+>>>>>>> b02e33939daf2852088d5b2b2c3020899135325b
