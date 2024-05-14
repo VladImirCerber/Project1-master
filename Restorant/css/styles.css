@@ -300,6 +300,10 @@ body {
     transition: background-color 0.2s linear;
 }
 
+.right-btn:hover {
+    background-color: #894b17
+}
+
 .block-holder {
     display: flex;
     justify-content: space-between;
@@ -319,4 +323,26 @@ body {
 
 .dishes-title span {
     color: #D67E34;
+}
+
+.burgers {
+    display: flex;
+    justify-content: center;
+    margin-top: 139px;
+}
+
+.burger-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 29px;
+}
+
+.burgers-image {
+    margin-right: 20px;
+}
+
+.burger-text {
+    font-family: "Tinos", serif;
+    font-size: 26px;
+    margin-left: 20px;
 }
