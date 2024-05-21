@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-    background-image: url(/Project1-master/Restorant/img/bg.jpg);
+    background-image: url(/Restorant/img/bg.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -270,7 +270,7 @@ body {
 }
 
 .black-block {
-    background-image: url(../img/blackbg.jpg);
+    background-image: url(/Restorant/img/blackbg.jpg);
     padding: 80px 0;
 }
 

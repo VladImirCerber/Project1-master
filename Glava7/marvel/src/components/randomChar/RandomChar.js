@@ -6,7 +6,7 @@ import MarvelService from '../../services/MarvelService';
 import './randomChar.scss';
 import molshit from '../../recources/img/molshit.png';
 
-class RandomChar extends Component {
+const RandomChar = () {
     state = {
         char: {},
         loading: true,
