@@ -278,7 +278,11 @@ let n = 10;
         return result;
     }
 
-    let x = 
+    let x = 1
+        
+    console.log(x);
+
+    console.log(x.length);
 
 
 
