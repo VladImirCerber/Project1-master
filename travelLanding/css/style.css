@@ -428,13 +428,34 @@ textarea {
   .wrapper{
     max-width: 1060px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 40px
   }
 
   .wrapper-full{
     max-width: 1262px;
     margin: 0 auto;
     padding: 0 15px;
+  }
+  
+  .search {
+    color: white;
+  }
+
+  .window2 {
+    width: 250px;
+    background-color: #113d77;
+    padding: 2px 2px;
+  }
+
+  .tree {
+    color: rgb(45, 63, 221);
+    background-color: #babbbd;
+    font-size: 18px;
+    line-height: 25px
+  }
+
+  .zag {
+    font-weight: 700;
   }
 
   .section__title{
@@ -561,9 +582,9 @@ textarea {
 
   .intro__title{
     max-width: 619px;
-    margin-bottom: 22px;
+    margin-bottom: 10px;
     font-weight: 500;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 60px;
     color: white;
   }
