@@ -441,22 +441,33 @@ textarea {
     color: white;
   }
 
-  .window2 {
-    width: 250px;
-    background-color: #113d77;
-    padding: 2px 2px;
+  .spravka_list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+    padding-bottom: 20px;
+    z-index: 999;
   }
 
-  .tree {
-    color: rgb(45, 63, 221);
-    background-color: #babbbd;
+  
+
+  .spravka_link {
     font-size: 18px;
-    line-height: 25px
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
   }
 
-  .zag {
-    font-weight: 700;
+  .spravka_link:hover, .spravka_link:focus, .spravka_link:active{
+    opacity: 0.75;
   }
+
+
+
 
   .section__title{
     font-weight: 500;
