@@ -443,7 +443,7 @@ textarea {
     -o-transition: 0.2s linear;
     transition: 0.2s linear;
     padding-bottom: 20px;
-    z-index: 999;
+    z-index: 9;
   }
 
   .wrapper-full{
@@ -481,23 +481,20 @@ textarea {
     position: relative; /* Абсолютное позиционирование */
     display: none; /* Прячем подменю */
     width: 200px; /* Ширина подменю */
-    background: #7c3fdd; /* Цвет фона */
+    color: white;
+    background: #fafafa; /* Цвет фона */
     box-shadow: 0 0 10px #666; /* Параметры тени */
   }
 
-  .spravka_item > li {
-    display: inline-block; /* Выстраиваем по горизонтали */
-    border-right: 1px solid #fff; /* Белая линия справа */
-    position: relative; /* Относительное позиционирование */
-  }
+  
 
   .spravka_item a {
     text-decoration: none; /* Убираем подчёркивание */
   }
 
   .spravka_item ul a:hover {
-    background: #1505a8; /* Цвет фона */
-    color: #fff; /* Цвет текста */
+    background: #ffffff; /* Цвет фона */
+    color: #777777; /* Цвет текста */
   }
 
   .spravka_item:hover ul {
@@ -507,7 +504,7 @@ textarea {
   .spravka_item > li:hover::before {
     content: ''; /* Создаём пустой псевдоэлемент */
     top: 0; left: 0; right: 0; bottom: 0; /* Размер совпадает с пунктом меню */
-    box-shadow: 0 5px 10px #666; /* Параметры тени */
+    box-shadow: 0 5px 10px #ee3939; /* Параметры тени */
     position: absolute; /* Абсолютное позиционирование */
    }
 
@@ -655,6 +652,7 @@ textarea {
 
   .intro{
     min-height: 100vh;
+    height: 150vh;
     background: url(../img/jpg/intro-bg.jpg) no-repeat center;
     background-size: cover;
     padding-top: 263px;
