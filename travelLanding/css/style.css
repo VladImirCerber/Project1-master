@@ -464,7 +464,6 @@ textarea {
     -webkit-transition: 0.2s linear;
     -o-transition: 0.2s linear;
     transition: 0.2s linear;
-    z-index: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень под меню */
   }
   
@@ -475,16 +474,22 @@ textarea {
     color: white;
   }
 
-  
+  .spravka_item > li > a {
+    padding: 10px 15px; /* Поля */
+    border-right: 1px solid #d1d1d1; /* Серая линия справа */
+    position: relative; /* Относительное позиционирование */
+    z-index: 3; /* Выводим поверх остальных элементов */
+   }
 
   .spravka_item ul{
     position: relative; /* Абсолютное позиционирование */
     display: none; /* Прячем подменю */
     width: 200px; /* Ширина подменю */
-    color: white;
-    background: #fafafa; /* Цвет фона */
-    box-shadow: 0 0 10px #666; /* Параметры тени */
+    background: #919191; /* Цвет фона */
+    box-shadow: 0 0 10px #949494; /* Параметры тени */
+    padding: 5px 10px;
   }
+
 
   
 
@@ -492,10 +497,7 @@ textarea {
     text-decoration: none; /* Убираем подчёркивание */
   }
 
-  .spravka_item ul a:hover {
-    background: #ffffff; /* Цвет фона */
-    color: #777777; /* Цвет текста */
-  }
+  
 
   .spravka_item:hover ul {
     display: block;
@@ -507,6 +509,11 @@ textarea {
     box-shadow: 0 5px 10px #ee3939; /* Параметры тени */
     position: absolute; /* Абсолютное позиционирование */
    }
+
+   .spravka_item ul a:hover {
+    background: #fdfdfd; /* Цвет фона */
+    color: #868686; /* Цвет текста */
+  }
 
   .spravka_item:hover, .spravka_link:focus, .spravka_link:active{
     opacity: 0.75;
