@@ -431,7 +431,20 @@ textarea {
     padding: 0 40px;
   }
 
-  
+  .wrapper1 {
+    max-width: 300px;
+    margin: 0 0;
+    padding: 0 30px;
+    background-color: #002e4e;
+    display: block;
+    margin-left: 25px;
+    position: fixed;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+    padding-bottom: 20px;
+    z-index: 9;
+  }
 
   .wrapper-full{
     max-width: 1262px;
@@ -447,6 +460,93 @@ textarea {
   .search {
     color: rgb(184, 184, 184);
   }
+
+  .spravka_list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень под меню */
+  }
+  
+  .spravka_item{
+    padding-left: 5px;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+  }
+
+  .spravka_item > li > a {
+    padding: 10px 15px; /* Поля */
+    border-right: 1px solid #d1d1d1; /* Серая линия справа */
+    position: relative; /* Относительное позиционирование */
+    z-index: 3; /* Выводим поверх остальных элементов */
+   }
+
+  .spravka_item ul{
+    position: relative; /* Абсолютное позиционирование */
+    display: none; /* Прячем подменю */
+    width: 200px; /* Ширина подменю */
+    background: #919191; /* Цвет фона */
+    box-shadow: 0 0 10px #949494; /* Параметры тени */
+    padding: 5px 10px;
+  }
+
+
+  
+
+  .spravka_item a {
+    text-decoration: none; /* Убираем подчёркивание */
+  }
+
+  
+
+  .spravka_item:hover ul {
+    display: block;
+  }
+
+  .spravka_item > li:hover::before {
+    content: ''; /* Создаём пустой псевдоэлемент */
+    top: 0; left: 0; right: 0; bottom: 0; /* Размер совпадает с пунктом меню */
+    box-shadow: 0 5px 10px #ee3939; /* Параметры тени */
+    position: absolute; /* Абсолютное позиционирование */
+   }
+
+   .spravka_item ul a:hover {
+    background: #fdfdfd; /* Цвет фона */
+    color: #868686; /* Цвет текста */
+  }
+
+  .spravka_item:hover, .spravka_link:focus, .spravka_link:active{
+    opacity: 0.75;
+  }
+  
+
+  .spravka_link {
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .spravka_link:hover, .spravka_link:focus, .spravka_link:active{
+    opacity: 0.75;
+  }
+
+  .spravka_link1 {
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .spravka_link1: hover, .spravka_link:focus, .spravka_link:active{
+    opacity: 0.75;
+  }
+
 
   .section__title{
     font-weight: 500;
@@ -563,12 +663,12 @@ textarea {
   /*Intro styles start */ 
 
   .intro{
-    min-height: 20px;
-    height: 30px;
-    background: url(../img/jpg/intro-bg.jpg) no-repeat center;
+    min-height: 100vh;
+    height: 150vh;
+    background: url(./img/jpg/intro-bg.jpg) no-repeat center;
     background-size: cover;
-    padding-top: 223px;
-    padding-bottom: 23px;
+    padding-top: 263px;
+    padding-bottom: 223px;
   }
 
   .intro__title{
@@ -582,7 +682,7 @@ textarea {
 
   .intro__subtitle{
     max-width: 546px;
-    color: rgb(250, 249, 249);
+    color: white;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 59px;
