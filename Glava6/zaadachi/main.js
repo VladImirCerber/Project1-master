@@ -14,3 +14,30 @@ let result = input
     .filter((e1) => !expired)
 
 console.log(result);
+
+
+
+
+const propsForDelete = ['name', 'id'];
+
+const obj = {
+
+   name: 'qwe',
+
+   id: 12346,
+
+   host: '127.0.0.1',
+
+   delay: 1500
+
+};
+
+const transform = function (obj, props) {
+    delete obj.name;
+    delete obj.id;
+};
+
+
+transform(obj, propsForDelete); // => {host: '127.0.0.1', delay: 1500}
+
+console.log(obj);

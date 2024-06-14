@@ -100,3 +100,50 @@ let recipeMap = new Map([
   };
 
   
+С помощью условий.
+
+1.
+var arr = [3,5,7];
+if (arr.length == 0) {
+    console.log('Массив arr пустой');
+  } else {
+    console.log('В массиве arr что-то есть');
+  }
+
+2.
+
+let A = {
+  a: 1,
+  b: 2,
+  list: [1,2,3]
+};
+console.log(typeof A); 
+
+if (Object.keys(A).length === 0) {
+    console.log('Объект пуст');
+} else {
+  if (A.list.length == 0) {
+    console.log('Массив в list пустой')
+  } else {
+    console.log('Массив не пуст');
+  }
+  console.log('Объект не пуст');
+};
+
+
+4.
+
+var obj = {};
+// ...
+obj.prop = [];
+
+console.log(!!(false));
+console.log(!!(0));
+console.log(!!(''));
+console.log(!!(undefined));
+console.log(!!(null));
+console.log(!!(NaN));
+console.log(!!(BigInt(0)));
+
+
+console.log([1,2,3,4,5].map(parseInt));
