@@ -43,7 +43,7 @@ function openNav() {
     document.getElementById("main").style.marginLeft = "0";
   }
 
-// Scroll to anchors
+//Scroll to anchors
 (function () {
 
     const smoothScroll = function (targetEl, duration) {
