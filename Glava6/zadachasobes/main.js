@@ -285,6 +285,113 @@ let n = 10;
     console.log(x.length);
 
 
+    //////Замыкания 
+
+    const sayHi = (name) => {
+        const greeting = 'Hello, my name is';
+        return `${greeting} ${name}`
+    }
+
+    // console.log(sayHi('Jonh'));
+
+    const Povtor = (greeting) => {
+        return (name) => `${greeting} ${name}`
+    }
+
+    const sayHi = Povtor('Hello');
+    console.log(sayHi('Vova'));
 
 
+    //Zadacha Polindrom
+    console.log('test5', isPallindrome('totot'));
+
+    function isPallindrome (proverka) {
+        proverka = proverka.toLowerCase().replace(/\W/g, '');
+        const proverkaArray = [...proverka];
+        const newArray = [];
+        proverkaArray.forEach(element => {
+            newArray.unshift(element);
+        });
+        const reverseProverka = newArray.join('');
+        console.log(proverka);
+        return proverka === reverseProverka;
+    }
+
+    console.log('Test1', isPallindrome('testing'));
+    console.log('Test1', isPallindrome('Momom'));
+    console.log("Test 7:", isPallindrome("A man, a plan, a canal, Panama!"));
+
+
+    // let arr1 = ['h','e','l','l','o'];
+    // let arr2 = [...arr1];
+
+    // console.log(arr2);
+
+    // function arr(...args) {
+    //     let sum = 0;
+    //     for (let arg of args) sum += arg;
+    //     return sum;
+    // }
+
+    // console.log(arr(1,2,3));
+
+    // Функция поиска самого короткого слова
+
+    function findShort(words) {
+        var wordsArr = words.split(' ');
+        var sortedWordsArr = wordsArr.sort(function(a, b) {
+            return a.length - b.length;
+        });
+        return sortedWordsArr[0];
+    }
+
+    console.log(findShort('Thesf Smallest word intrr sentence'));
+    console.log(findShort('Just tes ng'));
+
+    //Функция создания инициалов 
+
+    function initials(str) {
+        return str.split(/\s+/).map((w,i) => i ? w.substring(0,1).toUpperCase() + '.' : w).join(' ');
+    }
+
+    console.log(initials('Серебряков владимир александрович'));
+    
+
+    //Замыкания
+
+    // Дочерняя(Вложенная) функция 
+    //замыкает внутри себя состояние переменных обьявленных в родительской.
+    function Zamikanie() {
+        let a = 0;
+
+        function Zamok() {
+            a += 1;
+            return a;
+        }
+
+        return Zamok;
+    }
+
+
+    const res = Zamikanie();
+    console.log(res());
+    console.log(res());
+    console.log(res());
+
+    // Promise - обьект представляющий завершение или неудачу ассинхронной операции и ее результат
+    // 3 состояния: Pending(Ожидание) Fullfield (Выполнено) Rejected (Выполнено с ошибкой)
+
+    var a = 5,
+        b = 10,
+        c = 20;
+
+    let obeshanie = new Promise(function(resolve, reject) {
+        setTimeout(() => {
+            if (a < b < c) {
+                resolve(console.log('Данные верны'));
+            } else {
+                reject(console.log('Данные не верны проверьте условие'));
+            }
+        },1000);
+    });
 
