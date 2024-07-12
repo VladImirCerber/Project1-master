@@ -427,18 +427,18 @@ textarea {
   
   .wrapper{
     max-width: 1060px;
-    margin: 0 auto;
-    padding: 0 40px;
+    margin: 0 30px;
+    padding: 0 30px;
   }
 
   .wrapper1 {
+    position: relative;
     max-width: 300px;
     margin: 0 0;
     padding: 0 30px;
     background-color: #002e4e;
-    display: block;
-    margin-left: 25px;
-    position: fixed;
+    display:block;
+    margin-left: 30px;
     -webkit-transition: 0.2s linear;
     -o-transition: 0.2s linear;
     transition: 0.2s linear;
@@ -581,9 +581,11 @@ textarea {
     z-index: 999;
   }
 
-  .header_active{
-    background: #002e4e;
-  }
+  
+
+  
+
+  
 
   .header__wrapper{
     display: -webkit-box;
@@ -597,24 +599,74 @@ textarea {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 56px;
+    padding-top: 36px
+
   }
 
-  
-  .header__list{
-    display: -webkit-box;
-    display: -ms-flexbox;
+  .header__logo {
+    display:flexbox;
+    margin-left: 0;
+  }
+
+  .header__list {
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    position: fixed;
+    top: 10px;
+    left: 250px;
+    width: 100%;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень под меню */
   }
 
   .header__item{
+    position:sticky;
     margin-right: 82px;
   }
 
   .header__item:last-child{
     margin-right: 0;
+    margin-bottom: 10px;
+    
+  }
+
+ 
+  .header__item ul{
+    position: relative; /* Абсолютное позиционирование */
+    display:none; /* Прячем подменю */
+    width: 200px; /* Ширина подменю */
+    background: #919191; /* Цвет фона */
+    box-shadow: 0 0 10px #949494; /* Параметры тени */
+    padding: 5px 10px;
+  }
+
+  .header__item a {
+    text-decoration: none; /* Убираем подчёркивание */
+  }
+
+  .header__item:hover ul {
+    display: block;
+  }
+
+  .header__item > li:hover::before {
+    content: ''; /* Создаём пустой псевдоэлемент */
+    top: 0; left: 0; right: 0; bottom: 0; /* Размер совпадает с пунктом меню */
+    box-shadow: 0 5px 10px #ee3939; /* Параметры тени */
+    position: absolute; /* Абсолютное позиционирование */
+   }
+
+   .header__item ul a:hover {
+    background: #fdfdfd; /* Цвет фона */
+    color: #868686; /* Цвет текста */
+  }
+
+  .header__item:hover, .header__link:focus, .header__link:active{
+    opacity: 0.75;
+  }
+
+  .header_active{
+    background: #013559;
   }
 
   .header__link{
